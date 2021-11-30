@@ -26,9 +26,16 @@ public class SimpletronComputerTest {
     }
 
     @Test
-    public void PrintsWelcomeMessage() {
+    public void printsWelcomeMessage() {
         var computer = new SimpletronComputer();
         computer.showWelcomeMessage();
         assertTrue(outContent.toString().contains("Welcome to Simpletron!"));
+    }
+
+    @Test
+    public void welcomeMessageHasCorrectSpacing() {
+        var computer = new SimpletronComputer();
+        computer.showWelcomeMessage();
+        assertTrue(outContent.toString().contains("(?). ***"));
     }
 }
